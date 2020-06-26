@@ -7,8 +7,8 @@ from tkinter import *
 
 root = Tk()
 
-e = Entry(root, width=50)
-e.pack()
+e = Entry(root, width=100, font=("Helvetica", 32))
+e.pack(pady=20)
 e.insert(0, "Enter Your Name: ")
 
 def myClick():
@@ -16,7 +16,7 @@ def myClick():
     myLabel = Label(root, text=hello)
     myLabel.pack()
 
-myButton = Button(root, text="Enter Your Name", command=myClick)
-myButton.pack()
+my_button = Button(root, text="Enter Your Name", command=myClick)
+my_button.pack()
 
 root.mainloop()

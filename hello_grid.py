@@ -11,14 +11,21 @@ root.geometry("400x400")
 myLabel = Label(
     root, text="Hello World!",
     font=("Helvetica", 40),
-    height=100,
-    width=200,
     fg="#ffffff",
-    bg="red",
-    relief="groove",
-    state="normal",
+    bg="#000000"
     )
+# We can use sticky=W or E or N or S
+# or all of them separated by commas
+# We can use rowspan too
+myLabel.grid(row=0, column=0, columnspan=2)
 
-myLabel.pack(pady=50)
+myLabel2 = Label(root, text="Second Thing!")
+myLabel2.grid(row=1, column=0)
+
+myLabel3 = Label(root, text="Third Thing!")
+myLabel3.grid(row=2, column=1)
+
+
+
 
 root.mainloop()

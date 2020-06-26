@@ -6,12 +6,14 @@
 from tkinter import *
 
 root = Tk()
+root.title("Buttons")
+root.geometry("400x400")
 
-def myClick():
-    myLabel = Label(root, text="Look! I clicked a Button!!")
-    myLabel.pack()
+# Create clicked function
+def clicked():
+    myLabel = Label(root, text="Look! I clicked a Button!!").pack()
 
-myButton = Button(root, text="Click Me!", command=myClick)
-myButton.pack()
+# Create Button Widget
+myButton = Button(root, text="Click Me!", command=clicked).pack(pady=20)
 
 root.mainloop()
